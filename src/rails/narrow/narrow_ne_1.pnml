@@ -16,6 +16,7 @@ if (param_tracks_1>0&&param_tracks_1!=2){
         construction_cost:              2;
         maintenance_cost:               2;
         sort_order:                     01;
+        map_colour:                     106;
 
         // railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
         compatible_railtype_list:       narrow_all;

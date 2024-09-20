@@ -16,6 +16,7 @@ item(FEAT_RAILTYPES, track_linear_1, 30) {
         construction_cost:              2;
         maintenance_cost:               2;
         sort_order:                     30;
+        map_colour:                     186;
 
         railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
         compatible_railtype_list: standard_all;
