@@ -28,6 +28,14 @@ STR_PARAM_BALLAST_DESC:Author of this GRF used to hate wide ballast until... he 
 STR_PARAM_CURRENT:Disable Currents
 STR_PARAM_CURRENT_DESC:If disabled, AC/DC/Linear Motor merged into 1 (electrified) track, just like in JapanSet {}{WHITE}Currently does nothing ;_;
 
+STR_COST:Define the build cost
+
+STR_COST_1:Almost Free
+STR_COST_2:Low
+STR_COST_3:Normal
+STR_COST_4:High
+STR_COST_5:xUSSR level madness
+
 STR_PARAM_TYPE_1:Weathered {STRING}
 STR_PARAM_TYPE_2:Modern {STRING}
 STR_PARAM_TYPE_3:Urban {STRING}
@@ -83,8 +91,9 @@ STR_LNR:{STRING} {ORANGE}(Linear Motor){WHITE}
 STR_NARROW:Narrow Gauge
 STR_STANDARD:Standard Gauge
 STR_SCOTCH:Scotch Gauge
-STR_DUAL_G:Dual-Gauge
+STR_DUAL_G:Dual Gauge
 STR_SNIN:Standard High-Speed
+STR_GUIDEWAY:Guideway
 STR_UNIVERSAL:Universal Underground WIP
 
 STR_DECO_1:JP+ Ballast Ground
@@ -95,6 +104,7 @@ STR_DECO_3:JP+ High-Speed Ballast Ground
 STR_DISABLED:Disabled
 
 STR_URBAN:Urban {STRING}
+STR_COVERED:Covered {STRING}
 # .?Modern-> Gauge -> Electric system
 STR_TRACK:{STRING} Track{WHITE}
 STR_PURCHASE:Purchase {STRING} Trains
