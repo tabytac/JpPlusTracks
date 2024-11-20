@@ -1,8 +1,7 @@
-if (param_tracks_4==1){
-item(FEAT_RAILTYPES, track_standard_metro_1, 28) {
+item(FEAT_RAILTYPES, track_standard_metro_1, 27) {
     property {
-        label:                          "JST1";
-        introduction_date:              date(0001, 1, 1);               
+        label:                          "SAA3";
+        introduction_date:              date(1930, 1, 1);               
         name:                           string(STR_METRO,string(STR_TRACK,string(STR_STANDARD)));
         menu_text:                      string(STR_METRO,string(STR_TRACK,string(STR_STANDARD)));
         toolbar_caption:                string(STR_METRO,string(STR_TRACK,string(STR_STANDARD)));
@@ -15,12 +14,17 @@ item(FEAT_RAILTYPES, track_standard_metro_1, 28) {
         speed_limit:                    100 km/h;
         construction_cost:              10;
         maintenance_cost:               12;
+<<<<<<< HEAD
         sort_order:                     28;
         map_colour:                     209;
+=======
+        sort_order:                     27;
+>>>>>>> feb6b43c2a40c9d9a6ec25bca4ba456972443ebf
 
         // railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-        compatible_railtype_list: standard_all;
-        powered_railtype_list: standard_metro;
+        compatible_railtype_list: [tt_standard_ALL];
+        powered_railtype_list: [tt_metro];
+        alternative_railtype_list: [ALT_SAA3];
     }
 
     graphics {
@@ -32,8 +36,8 @@ item(FEAT_RAILTYPES, track_standard_metro_1, 28) {
         depots:                         sw_depot_standard_1;
         bridge_surfaces:                sw_metro_1_bridge;
         level_crossings:                sw_standard_crossing_conc;
-        catenary_wire:                  sw_catenary_wire;
-        catenary_pylons:                sw_pylons_5;
-        fences:                         sw_param_fence_standard_2;
+        // catenary_wire:                  sw_catenary_wire;
+        // catenary_pylons:                sw_pylons_5;
+        fences:                         sw_fence_standard_2;
     }
-}}
+}

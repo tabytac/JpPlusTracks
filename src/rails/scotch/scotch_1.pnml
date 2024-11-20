@@ -1,8 +1,7 @@
-if (param_tracks_2==1){
-item(FEAT_RAILTYPES, track_scotch_dc_1, 14) {
+item(FEAT_RAILTYPES, track_scotch_dc_1, 12) {
   property {
-      label:                          "JSC1";
-      introduction_date:              date(0001, 1, 1);               
+      label:                          "sAAD";
+      introduction_date:              date(1900, 1, 1);               
       name:                           string(STR_DC,string(STR_TRACK,string(STR_SCOTCH)));
       menu_text:                      string(STR_DC,string(STR_TRACK,string(STR_SCOTCH)));
       toolbar_caption:                string(STR_DC,string(STR_TRACK,string(STR_SCOTCH)));
@@ -15,12 +14,16 @@ item(FEAT_RAILTYPES, track_scotch_dc_1, 14) {
       speed_limit:                    130 km/h;
       construction_cost:              9;
       maintenance_cost:               12;
+<<<<<<< HEAD
       sort_order:                     14;
       map_colour:                     172;
+=======
+      sort_order:                     12;
+>>>>>>> feb6b43c2a40c9d9a6ec25bca4ba456972443ebf
 
       railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-      compatible_railtype_list:       scotch_dc;
-      powered_railtype_list:          scotch_dc;
+      compatible_railtype_list:       [tt_scotch_DC];
+      powered_railtype_list:          [tt_scotch_DC];
   }
 
   graphics {
@@ -33,7 +36,7 @@ item(FEAT_RAILTYPES, track_scotch_dc_1, 14) {
       bridge_surfaces:                sw_scotch_1_bridge;
       level_crossings:                sw_standard_crossing_wood;
       catenary_wire:                  sw_catenary_wire;
-      catenary_pylons:                sw_pylons_1;
-      fences:                         sw_param_fence_standard_1;
+      catenary_pylons:                sw_pylons_standard_met_timed_dc;
+      fences:                         sw_fence_standard_1;
   }
-}}
+}

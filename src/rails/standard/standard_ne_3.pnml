@@ -1,8 +1,7 @@
-if (param_tracks_3>1&&param_tracks_3!=2){
-item(FEAT_RAILTYPES, track_standard_ne_3, 19) {
+item(FEAT_RAILTYPES, track_standard_ne_3, 18) {
     property {
-        label:                          "JSN3";
-        introduction_date:              date(0001, 1, 1);               
+        label:                          "SCAN";
+        introduction_date:              date(1972, 1, 1);               
         name:                           string(STR_URBAN,string(STR_TRACK,string(STR_STANDARD)));
         menu_text:                      string(STR_URBAN,string(STR_TRACK,string(STR_STANDARD)));
         toolbar_caption:                string(STR_URBAN,string(STR_TRACK,string(STR_STANDARD)));
@@ -15,12 +14,16 @@ item(FEAT_RAILTYPES, track_standard_ne_3, 19) {
         speed_limit:                    160 km/h;
         construction_cost:              10;
         maintenance_cost:               8;
+<<<<<<< HEAD
         sort_order:                     19;
         map_colour:                     116;
+=======
+        sort_order:                     18;
+>>>>>>> feb6b43c2a40c9d9a6ec25bca4ba456972443ebf
 
         // railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-        compatible_railtype_list: standard_all;
-        powered_railtype_list: standard_ne;
+        compatible_railtype_list: [tt_standard_ALL];
+        powered_railtype_list: [tt_standard_ALL];
     }
     
     graphics {
@@ -32,8 +35,8 @@ item(FEAT_RAILTYPES, track_standard_ne_3, 19) {
         depots:                         sw_depot_standard_3;
         bridge_surfaces:                sw_standard_3_bridge;
         level_crossings:                sw_standard_crossing_urban;
-        catenary_wire:                  sw_catenary_wire;
-        catenary_pylons:                sw_pylons_1;
-        fences:                         sw_param_fence_standard_3;
+        // catenary_wire:                  sw_catenary_wire;
+        // catenary_pylons:                sw_pylons_1;
+        fences:                         sw_fence_standard_3;
     }
-}}
+}

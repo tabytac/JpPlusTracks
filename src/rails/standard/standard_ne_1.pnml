@@ -1,8 +1,7 @@
-//Always exists
-item(FEAT_RAILTYPES, track_standard_ne_1, 17) {
+item(FEAT_RAILTYPES, track_standard_ne_1, 16) {
     property {
-        label:                          "RAIL";
-        introduction_date:              date(0001, 1, 1);               
+        label:                          "SAAN";
+        introduction_date:              date(1900, 1, 1);               
         name:                           string(STR_TRACK,string(STR_STANDARD));
         menu_text:                      string(STR_TRACK,string(STR_STANDARD));
         toolbar_caption:                string(STR_TRACK,string(STR_STANDARD));
@@ -15,12 +14,16 @@ item(FEAT_RAILTYPES, track_standard_ne_1, 17) {
         speed_limit:                    130 km/h;
         construction_cost:              8;
         maintenance_cost:               9;
+<<<<<<< HEAD
         sort_order:                     17;
         map_colour:                     116;
+=======
+        sort_order:                     16;
+>>>>>>> feb6b43c2a40c9d9a6ec25bca4ba456972443ebf
 
         // railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-        compatible_railtype_list: standard_all;
-        powered_railtype_list: standard_ne;
+        compatible_railtype_list: [tt_standard_ALL];
+        powered_railtype_list: [tt_standard_ALL];
     }
 
     graphics {
@@ -28,12 +31,12 @@ item(FEAT_RAILTYPES, track_standard_ne_1, 17) {
         track_overlay:                  sw_standard_1_overlay;
         underlay:                       sw_standard_1_underlay;
         tunnels:                        sw_standard_tunnel_arch_underlay;
-        tunnel_overlay:                 sw_standard_tunnel_arch_overlay;
+        tunnel_overlay:                 sw_standard_tunnel_arch_ne_overlay;
         depots:                         sw_depot_standard_1;
         bridge_surfaces:                sw_standard_1_bridge;
         level_crossings:                sw_standard_crossing_wood;
-        catenary_wire:                  sw_catenary_wire;
-        catenary_pylons:                sw_pylons_1;
-        fences:                         sw_param_fence_standard_1;
+        // catenary_wire:                  sw_catenary_wire;
+        // catenary_pylons:                sw_pylons_1;
+        fences:                         sw_fence_standard_1;
     }
 }

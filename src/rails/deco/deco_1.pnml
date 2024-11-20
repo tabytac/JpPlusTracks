@@ -1,5 +1,4 @@
-if (param_tracks_11==1){
-item(FEAT_RAILTYPES, track_deco_1, 39) {
+item(FEAT_RAILTYPES, track_deco_1, 53) {
     property {
         label:                          "JEC1";
         introduction_date:              date(0001, 1, 1);               
@@ -15,7 +14,7 @@ item(FEAT_RAILTYPES, track_deco_1, 39) {
         speed_limit:                    0 km/h;
         construction_cost:              1;
         maintenance_cost:               1;
-        sort_order:                     39;
+        sort_order:                     53;
 
         railtype_flags:                 bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
         compatible_railtype_list:       ["JEC1"];
@@ -33,6 +32,6 @@ item(FEAT_RAILTYPES, track_deco_1, 39) {
         // level_crossings:                sw_deco_1_crossing;
         // catenary_wire:                  sw_catenary_wire;
         // catenary_pylons:                sw_pylons_1;
-        fences:                         sw_param_fence_standard_1;
+        fences:                         gfx_fence_0;
     }
-}}
+}

@@ -1,8 +1,7 @@
-if (param_tracks_5==1){
-item(FEAT_RAILTYPES, track_linear_2, 31) {
+item(FEAT_RAILTYPES, track_linear_2, 30) {
     property {
-        label:                          "JSL2";
-        introduction_date:              date(0001, 1, 1);               
+        label:                          "SBAI";
+        introduction_date:              date(1986, 1, 1);               
         name:                           string(STR_LNR,string(STR_URBAN,string(STR_TRACK,string(STR_STANDARD))));
         menu_text:                      string(STR_LNR,string(STR_URBAN,string(STR_TRACK,string(STR_STANDARD))));
         toolbar_caption:                string(STR_LNR,string(STR_URBAN,string(STR_TRACK,string(STR_STANDARD))));
@@ -15,12 +14,16 @@ item(FEAT_RAILTYPES, track_linear_2, 31) {
         speed_limit:                    130 km/h;
         construction_cost:              13;
         maintenance_cost:               13;
+<<<<<<< HEAD
         sort_order:                     31;
         map_colour:                     186;
+=======
+        sort_order:                     30;
+>>>>>>> feb6b43c2a40c9d9a6ec25bca4ba456972443ebf
 
         railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-        compatible_railtype_list: standard_all;
-        powered_railtype_list: linear;
+        compatible_railtype_list: [tt_standard_ALL];
+        powered_railtype_list: [tt_linear];
     }
 
     graphics {
@@ -33,7 +36,7 @@ item(FEAT_RAILTYPES, track_linear_2, 31) {
         bridge_surfaces:                sw_linear_2_bridge;
         level_crossings:                sw_standard_crossing_urban;
         catenary_wire:                  sw_catenary_wire;
-        catenary_pylons:                sw_pylons_4;
-        fences:                         sw_param_fence_standard_2;
+        catenary_pylons:                sw_pylons_6;
+        fences:                         gfx_fence_6;
     }
-}}
+}
