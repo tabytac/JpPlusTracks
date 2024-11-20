@@ -14,12 +14,7 @@ item(FEAT_RAILTYPES, track_standard_ne_1, 16) {
         speed_limit:                    130 km/h;
         construction_cost:              8;
         maintenance_cost:               9;
-<<<<<<< HEAD
-        sort_order:                     17;
-        map_colour:                     116;
-=======
         sort_order:                     16;
->>>>>>> feb6b43c2a40c9d9a6ec25bca4ba456972443ebf
 
         // railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
         compatible_railtype_list: [tt_standard_ALL];
