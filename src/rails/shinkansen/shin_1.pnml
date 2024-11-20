@@ -1,7 +1,6 @@
-if (param_tracks_6==1){
-item(FEAT_RAILTYPES, track_shin_1, 32) {
+item(FEAT_RAILTYPES, track_shin_1, 31) {
     property {
-        label:                          "SAAE";
+        label:                          "SGAA";
         introduction_date:              date(1959, 1, 1);               
         name:                           string(STR_AC,string(STR_TRACK,string(STR_SNIN)));
         menu_text:                      string(STR_AC,string(STR_TRACK,string(STR_SNIN)));
@@ -12,25 +11,15 @@ item(FEAT_RAILTYPES, track_shin_1, 32) {
 
         station_graphics:               RAILTYPE_STATION_NORMAL;
         acceleration_model:             ACC_MODEL_RAIL;
-        speed_limit:                    285 km/h;
-        construction_cost:              2;
-        maintenance_cost:               2;
-        sort_order:                     32;
-        map_colour:                     153;
+        speed_limit:                    (285+1)*SPEED_MULTIPLY km/h;
+        construction_cost:              20;
+        maintenance_cost:               20;
+        sort_order:                     31;
 
         railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
-        compatible_railtype_list:
-        ["JSH1","JSH2","JSH3",//shin
-        "JSA1","JSA2","JSA3",//ac
-        "JSV1","JSV2","JSV3",//acdc
-        "JUN1","ELRL","SAAE","HSSN"//universal
-        ];
-        powered_railtype_list:
-        ["JSH1","JSH2","JSH3",//shin
-        "JSA1","JSA2","JSA3",//ac
-        "JSV1","JSV2","JSV3",//acdc
-        "JUN1","ELRL","SAAE","HSSN"//universal
-        ];
+        compatible_railtype_list: [tt_standard_ALL];
+        powered_railtype_list:[tt_shinkansen];
+        alternative_railtype_list:[ALT_SHAA];
     }
 
     graphics {
@@ -43,7 +32,7 @@ item(FEAT_RAILTYPES, track_shin_1, 32) {
         bridge_surfaces:                sw_shin_1_bridge;
         // level_crossings:                sw_standard_crossing_1;
         catenary_wire:                  sw_catenary_wire;
-        catenary_pylons:                sw_pylons_3;
-        fences:                         sw_param_fence_standard_2;
+        catenary_pylons:                sw_pylons_shinkansen_1;
+        fences:                         sw_fence_shinkansen_1;
     }
-}}
+}

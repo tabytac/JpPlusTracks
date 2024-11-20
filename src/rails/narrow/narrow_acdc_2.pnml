@@ -1,25 +1,23 @@
-if (param_tracks_1>1){
 item(FEAT_RAILTYPES, track_narrow_acdc_2, 11) {
     property {
-        label:                          "JNV2";
-        introduction_date:              date(0001, 1, 1);               
-        name:                           string(STR_DUAL,string(STR_TRACK,string(STR_NARROW)));
-        menu_text:                      string(STR_DUAL,string(STR_TRACK,string(STR_NARROW)));
-        toolbar_caption:                string(STR_DUAL,string(STR_TRACK,string(STR_NARROW)));
+        label:                          "NBAE";
+        introduction_date:              date(1952, 1, 1);               
+        name:                           string(STR_ACDC,string(STR_TRACK,string(STR_CONCRETE,string(STR_NARROW))));
+        menu_text:                      string(STR_ACDC,string(STR_TRACK,string(STR_CONCRETE,string(STR_NARROW))));
+        toolbar_caption:                string(STR_ACDC,string(STR_TRACK,string(STR_CONCRETE,string(STR_NARROW))));
         new_engine_text:                string(STR_NARROW);
-        autoreplace_text:               string(STR_DUAL,string(STR_REPLACE, string(STR_NARROW)));
+        autoreplace_text:               string(STR_ACDC,string(STR_REPLACE, string(STR_NARROW)));
 
         station_graphics:               RAILTYPE_STATION_NORMAL;
         acceleration_model:             ACC_MODEL_RAIL;
-        speed_limit:                    130 km/h;
-        construction_cost:              2;
-        maintenance_cost:               2;
+        speed_limit:                    (130+1)*SPEED_MULTIPLY km/h;
+        construction_cost:              24;
+        maintenance_cost:               16;
         sort_order:                     11;
-        map_colour:                     57;
 
         railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-        compatible_railtype_list:       narrow_all;
-        powered_railtype_list:          narrow_acdc;
+        compatible_railtype_list:       [tt_narrow_ALL];
+        powered_railtype_list:          [tt_narrow_ACDC];
     }
 
     graphics {
@@ -32,7 +30,7 @@ item(FEAT_RAILTYPES, track_narrow_acdc_2, 11) {
         bridge_surfaces:                sw_narrow_2_1_bridge;
         level_crossings:                sw_narrow_crossing_conc;
         catenary_wire:                  sw_catenary_wire;
-        catenary_pylons:                sw_pylons_3;
-        fences:                         sw_param_fence_narrow_2;
+        catenary_pylons:                sw_pylons_narrow_acdc_2;
+        fences:                         sw_fence_narrow_2;
     }
-}}
+}

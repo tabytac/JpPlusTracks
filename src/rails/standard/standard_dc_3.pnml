@@ -1,8 +1,7 @@
-if (param_tracks_3>1){
-item(FEAT_RAILTYPES, track_standard_dc_3, 22) {
+item(FEAT_RAILTYPES, track_standard_dc_3, 21) {
     property {
-        label:                          "JSD3";
-        introduction_date:              date(0001, 1, 1);               
+        label:                          "SCAD";
+        introduction_date:              date(1972, 1, 1);               
         name:                           string(STR_DC,string(STR_URBAN,string(STR_TRACK,string(STR_STANDARD))));
         menu_text:                      string(STR_DC,string(STR_URBAN,string(STR_TRACK,string(STR_STANDARD))));
         toolbar_caption:                string(STR_DC,string(STR_URBAN,string(STR_TRACK,string(STR_STANDARD))));
@@ -12,15 +11,14 @@ item(FEAT_RAILTYPES, track_standard_dc_3, 22) {
 
         station_graphics:               RAILTYPE_STATION_NORMAL;
         acceleration_model:             ACC_MODEL_RAIL;
-        speed_limit:                    160 km/h;
-        construction_cost:              2;
-        maintenance_cost:               2;
-        sort_order:                     22;
-        map_colour:                     214;
+        speed_limit:                    (160+1)*SPEED_MULTIPLY km/h;
+        construction_cost:              12;
+        maintenance_cost:               12;
+        sort_order:                     21;
 
         railtype_flags:                 bitmask(RAILTYPE_FLAG_CATENARY);
-        compatible_railtype_list: standard_all;
-        powered_railtype_list: standard_dc;
+        compatible_railtype_list: [tt_standard_ALL];
+        powered_railtype_list: [tt_standard_DC];
     }
 
     graphics {
@@ -33,7 +31,7 @@ item(FEAT_RAILTYPES, track_standard_dc_3, 22) {
         bridge_surfaces:                sw_standard_3_bridge;
         level_crossings:                sw_standard_crossing_urban;
         catenary_wire:                  sw_catenary_wire;
-        catenary_pylons:                sw_pylons_5;
-        fences:                         sw_param_fence_standard_3;
+        catenary_pylons:                sw_pylons_standard_dc_2;
+        fences:                         sw_fence_standard_3;
     }
-}}
+}
